@@ -63,6 +63,13 @@ task preprocessing {
     String? keep_maf
     String keep_maf_argument = if (keep_maf != "") then "--keep-maf" else ""
 
+    runtime {
+        cpu: 1
+        memory:"10 GB"
+        walltimeset :"1:00:00"
+        docker: "leeliu14/ldsctest:1.0.3"
+    }
+
 
 
     command<<<
