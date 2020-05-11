@@ -1,0 +1,14 @@
+{
+  "HGC_tutorial.W_LD_CHR_FILE_ADDRESS": "",
+  "HGC_tutorial.INTERCEPT_H2_PARAMETER": "",
+  "HGC_tutorial.SAMP_PREV_PARAMETER": "",
+  "HGC_tutorial.RG_FILES_INPUT": [","],
+  "HGC_tutorial.WORKFLOW_WORKING_DIRECTORY": "",
+  "HGC_tutorial.POP_PREV_PARAMETER": "",
+  "HGC_tutorial.INTERCEPT_GENCOV_PARAMETER": "",
+  "HGC_tutorial.NAME_OF_LDSC_OUTPUT": "",
+  "HGC_tutorial.IF_REQUIRED_NO_INTERCEPT": "",
+  "HGC_tutorial.WORKFLOW_OUTPUT_FILE_ADDRESS": "",
+  "HGC_tutorial.REF_LD_CHR_FILE_ADDRESS": ""
+}
+

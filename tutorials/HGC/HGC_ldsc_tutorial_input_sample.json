@@ -1,0 +1,15 @@
+{
+  "HGC_tutorial.W_LD_CHR_FILE_ADDRESS": "eur_w_ld_chr/",
+  "HGC_tutorial.INTERCEPT_H2_PARAMETER": "",
+  "HGC_tutorial.SAMP_PREV_PARAMETER": "0.5,0.5",
+  "HGC_tutorial.RG_FILES_INPUT": ["/rds/general/user/ll2319/home/LDSC_OUTPUT/Heritability_and_Genetic_Correlation_tutorial_output/scz.sumstats.gz",
+    "/rds/general/user/ll2319/home/LDSC_OUTPUT/Heritability_and_Genetic_Correlation_tutorial_output/bip.sumstats.gz"],
+  "HGC_tutorial.WORKFLOW_WORKING_DIRECTORY": "/rds/general/user/ll2319/home/LDSC_work",
+  "HGC_tutorial.POP_PREV_PARAMETER": "0.01,0.01",
+  "HGC_tutorial.INTERCEPT_GENCOV_PARAMETER": "",
+  "HGC_tutorial.NAME_OF_LDSC_OUTPUT": "scz_bip",
+  "HGC_tutorial.IF_REQUIRED_NO_INTERCEPT": "",
+  "HGC_tutorial.WORKFLOW_OUTPUT_FILE_ADDRESS": "/rds/general/user/ll2319/home/LDSC_OUTPUT/Heritability_and_Genetic_Correlation_tutorial_output",
+  "HGC_tutorial.REF_LD_CHR_FILE_ADDRESS": "eur_w_ld_chr/"
+}
+
