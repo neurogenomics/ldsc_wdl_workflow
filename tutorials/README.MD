@@ -1,4 +1,4 @@
-CTSA = Cell type specific analyses
+CTSA = Cell type specific analyses \n
 HGC = Heritability and Genetic Correlation
 LDSE = LD Score Estimation
 PH = Partitioned Heritability
