@@ -1,0 +1,10 @@
+{
+  "tutorial_prep.name_of_LD_Score_Estimation_tutorial_file": "LD_Score_Estimation_tutorial",
+  "tutorial_prep.name_of_Partitioned_Heritability_tutorial_file": "Partitioned_Heritability_tutorial",
+  "tutorial_prep.workflow_output_file_address": "/rds/general/user/ll2319/home/LDSC_OUTPUT",
+  "tutorial_prep.name_of_Cell_type_specific_analyses_tutorial_file": "Cell_type_specific_analyses_tutorial",
+  "tutorial_prep.workflow_input_file_address": "/rds/general/user/ll2319/home/LDSC_INPUT",
+  "tutorial_prep.workflow_working_directory": "/rds/general/user/ll2319/home/LDSC_work",
+  "tutorial_prep.name_of_Heritability_and_Genetic_Correlation_tutorial_file": "Heritability_and_Genetic_Correlation_tutorial"
+}
+
