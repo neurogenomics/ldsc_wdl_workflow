@@ -17,6 +17,6 @@ module load java
 java -Dconfig.file=YY.config -jar cromwell-XX.jar run ZZZ.wdl --inputs WWW.json
 
 #If you don't need to submit your work to PBS or using docker image, you can run this command:
-java -jar cromwell-XX.jar run ZZZ.wdl --inputs WWW.json
+java -jar cromwell-XX.jar run ZZZ.wdl --inputs inputname.json
 
 
