@@ -1,0 +1,14 @@
+{
+  "LD_Score_est_tutorial.if_estimate_l2": "",
+  "LD_Score_est_tutorial.bedfile_input": "",
+  "LD_Score_est_tutorial.ld_wind_sufflix_parameter": "",
+  "LD_Score_est_tutorial.workflow_working_directory": "",
+  "LD_Score_est_tutorial.if_annot_is_thin_annot": "",
+  "LD_Score_est_tutorial.name_of_output": "",
+  "LD_Score_est_tutorial.workflow_output_file_address": "",
+  "LD_Score_est_tutorial.only_print_ldscore_for_the_SNPs_list": "",
+  "LD_Score_est_tutorial.bimfile_input": "",
+  "LD_Score_est_tutorial.ld_wind_setting_parameter": "",
+  "LD_Score_est_tutorial.Plink_format_file_input": ""
+}
+
