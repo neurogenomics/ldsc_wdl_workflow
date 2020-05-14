@@ -1,1 +1,1 @@
-# ldsc-wdl-workflow
+#ldsc WDL(Workflow Description Language) workflow
