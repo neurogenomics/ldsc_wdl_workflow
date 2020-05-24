@@ -149,8 +149,8 @@ task make_normal_annot_22 {
 
     output {
         String out = read_string(stdout())
-        String out_annot_gz_address = ${output_file_address}
-        String out_annot_gz_preflix = ${out_file_name}
+        String out_annot_gz_address = "${output_file_address}"
+        String out_annot_gz_preflix = "${out_file_name}"
         String out_annot_gz_sufflix = ".annot.gz"
     }
 
