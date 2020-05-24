@@ -378,6 +378,7 @@ task partritioned_ld_score_loop {
 
     output {
         String out = read_string(stdout())
+        String ldscore_out_flag = "${out_file_name}"
     }
 
 }
