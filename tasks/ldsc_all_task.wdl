@@ -269,6 +269,9 @@ task ldsc_ph_from_continuous_annot {
     String print_coefficients_argument = if (print_coefficients != "") then "--print-coefficients" else ""
     String? print_delet_vals
     String print_delet_vals_argument = if (print_delet_vals != "") then "--print-delete-vals" else ""
+    #flag_for_chain is used to detect the input from last step
+    String? flag_for_chain
+
 
     runtime {
         cpu: 1
