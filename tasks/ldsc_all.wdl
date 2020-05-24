@@ -200,6 +200,12 @@ task ldsc_ctsa {
     String ref_ld_chr_cts_argument = if (ref_ld_chr_cts !="") then "--ref-ld-chr-cts ${ref_ld_chr_cts}" else ""
     String ref_ld_chr
     String ref_ld_chr_argument = if (ref_ld_chr != "") then "--ref-ld-chr ${ref_ld_chr}" else ""
+    String? frqfile_chr
+    String frqfile_chr_argument = if (frqfile_chr != "") then "--frqfile-chr ${frqfile_chr}" else ""
+    String? overlap_annot
+    String overlap_annot_argument = if (overlap_annot != "") then "--overlap-annot" else ""
+    String? print_coefficients
+    String print_coefficients_argument = if (print_coefficients != "") then "--print-coefficients" else ""
 
     runtime {
         cpu: 1
@@ -219,6 +225,9 @@ task ldsc_ctsa {
     ${ref_ld_chr_argument} \
     ${ref_ld_chr_cts_argument} \
     ${w_ld_chr_argument} \
+    ${frqfile_chr_argument} \
+    ${overlap_annot_argument} \
+    ${print_coefficients_argument} \
     --out ${out_file_name} 
 
     mv ${out_file_name}.log  ${out_file_name}.cell_type_results.txt -t ${output_file_address}
@@ -246,10 +255,10 @@ task ldsc_ph_from_continuous_annot {
     String? work_directory
     String? out_file_name
 
+    Array[String] ref_ld_chr_files
+
     String? h2
     String h2_argument = if (h2 != "") then "--h2 ${h2}" else ""
-    String? ref_ld_chr
-    String ref_ld_chr_argument = if (ref_ld_chr != "") then "--ref-ld-chr ${ref_ld_chr}" else ""
     String? frqfile_chr
     String frqfile_chr_argument = if (frqfile_chr != "") then "--frqfile-chr ${frqfile_chr}" else ""
     String? w_ld_chr
@@ -277,7 +286,7 @@ task ldsc_ph_from_continuous_annot {
 
     ./ldsc.py \
     ${h2_argument} \
-    ${ref_ld_chr_argument} \
+    --ref-ld-chr ${sep = "," ref_ld_chr_files} \
     ${frqfile_chr_argument} \
     ${w_ld_chr_argument} \
     ${overlap_annot_argument} \
@@ -304,7 +313,8 @@ workflow test_ldsc_ph_from_continuous_annot {
     String name_of_output
     String summstat_file
     String weight_file_address_and_flag
-    String ref_ldscore_file_and_flag
+    Array[String] ref_ldscore_file_and_flag
+
     String frq_file_and_flag
     String if_overlap_annot
     String if_print_coefficients
@@ -315,7 +325,7 @@ workflow test_ldsc_ph_from_continuous_annot {
         work_directory = workflow_working_directory,
         out_file_name = name_of_output,
         h2 = summstat_file,
-        ref_ld_chr = ref_ldscore_file_and_flag,
+        ref_ld_chr_files = ref_ldscore_file_and_flag,
         frqfile_chr = frq_file_and_flag,
         w_ld_chr = weight_file_address_and_flag,
         overlap_annot = if_overlap_annot,
