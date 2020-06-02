@@ -1,7 +1,7 @@
 #LDSE_tutorial.wdl
 
-import "/rds/general/user/ll2319/home/LDSC_work/wdl_task/make_annot_task.wdl" as MAKE_ANNOT
-import "/rds/general/user/ll2319/home/LDSC_work/wdl_task/ldsc_all.wdl" as LDSC
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/make_annot_task.wdl" as MAKE_ANNOT
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/ldsc_all_task.wdl" as LDSC
 
 workflow LD_Score_est_tutorial {
     String? workflow_output_file_address
