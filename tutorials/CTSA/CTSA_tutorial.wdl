@@ -1,6 +1,6 @@
 #CTSA_tutorial.wdl
-import "/rdsgpfs/general/user/ll2319/home/LDSC_work/wdl_task/munge_stat.wdl" as MUNGE_STAT
-import "/rdsgpfs/general/user/ll2319/home/LDSC_work/wdl_task/ldsc_all.wdl" as LDSC
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/munge_stat.wdl" as MUNGE_STAT
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/ldsc_all_task.wdl" as LDSC
 
 workflow Cell_type_specific_analyses_tutorial {
     String? WORKFLOW_OUTPUT_FILE_ADDRESS
