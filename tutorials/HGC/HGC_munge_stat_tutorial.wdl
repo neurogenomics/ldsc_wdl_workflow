@@ -1,6 +1,6 @@
 #HGC_munge_stat.wdl
 #workflow for Heritability and Genetic Correlation
-import "/rds/general/user/ll2319/home/LDSC_work/wdl_task/munge_stat.wdl" as MUNGE_STAT
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/munge_stat.wdl" as MUNGE_STAT
 
 workflow HGC_tutorial {
 #scz and bip common arguments

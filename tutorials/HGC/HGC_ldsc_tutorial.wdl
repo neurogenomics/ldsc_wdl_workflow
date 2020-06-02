@@ -1,6 +1,6 @@
 #HGC_ldsc.wdl
 #workflow for Heritability and Genetic Correlation
-import "/rds/general/user/ll2319/home/LDSC_work/wdl_task/ldsc_all.wdl" as LDSC_HGC
+import "https://raw.githubusercontent.com/leebio14/ldsc_wdl_workflow/master/tasks/ldsc_all_task.wdl" as LDSC_HGC
 
 workflow HGC_tutorial {
 
