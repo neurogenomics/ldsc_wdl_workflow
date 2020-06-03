@@ -5,11 +5,9 @@ PH = Partitioned Heritability
 
 Before using this tutorial files, plz pull latest cromwell files from here: https://github.com/broadinstitute/cromwell/releases 
 
-You can download and run "tutorial_preparation" part to prepare all files necessary for running this tutorial.  
-#1 Before running .wdl files, download coordinate .wdl from task file :https://github.com/leebio14/ldsc_wdl_workflow/tree/master/tasks   
-#2 Remember to change import "address" in order to make workflow recognize coordinate local task.wdl.  
-#3 Remember to modify input and output files address in input_sample.json files in order to make wdl find correct address  
-#4 For running HGC part, pgc.cross.bip.zip and pgc.cross.scz.zip files need to download from https://www.med.unc.edu/pgc/   
+You can download and run "tutorial_preparation" part to prepare all files necessary for running this tutorial.    
+#1 Remember to modify input and output files address in input_sample.json files in order to make wdl find correct address  
+#2 For running HGC part, pgc.cross.bip.zip and pgc.cross.scz.zip files need to download from https://www.med.unc.edu/pgc/   
 
 Command sample for running wdl  
 module load java
