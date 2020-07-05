@@ -134,7 +134,7 @@ task make_normal_annot_22 {
         --gene-set-file ${gene_set_file_address}/${gene_set_file_preflix}"$i"${gene_set_file_sufflix} \
         ${gene_coordinate_file_argument} \
         ${windowsize_argument} \
-        --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim\
+        --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
         ${no_merge_argument} \
         ${bedfile_argument} \
         --annot-file ${out_file_name}.$i.$j.annot.gz
