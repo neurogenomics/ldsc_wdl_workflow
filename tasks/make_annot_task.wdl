@@ -134,7 +134,7 @@ task make_normal_annot_22 {
         --gene-set-file ${gene_set_file_address}/${gene_set_file_preflix}"$i"${gene_set_file_sufflix} \
         ${gene_coordinate_file_argument} \
         ${windowsize_argument} \
-        --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
+        --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim\
         ${no_merge_argument} \
         ${bedfile_argument} \
         --annot-file ${out_file_name}.$i.$j.annot.gz
@@ -151,8 +151,73 @@ task make_normal_annot_22 {
         String out = read_string(stdout())
         String out_annot_gz_address = "${output_file_address}"
         String out_annot_gz_preflix = "${out_file_name}"
-        String out_annot_gz_sufflix = ".annot.gz"
+        String out_annot_gz_sufflix = "annot.gz"
     }
+
+}
+
+task make_thin_annot_22 {
+    String? output_file_address
+    String? work_directory
+    String? out_file_name 
+
+    Int cell_types_number
+    File bedfile
+    String bedfile_argument = if (bedfile != "") then "--bed-file ${bedfile}" else ""
+
+    String? bimfile_address
+    String? bimfile_preflix
+
+
+
+    runtime {
+        cpu:1
+        memory:"10 GB"
+        walltimeset:"1:00:00"
+        docker:"leeliu14/ldsctest:1.0.3"
+
+    }
+
+    command <<<
+
+    source activate ldsc
+    cd ${work_directory}/ldsc
+
+    for((j=1; j<=22; j=j+1))
+    do
+    ./make_annot.py \
+    ${bedfile_argument} \
+    --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
+    --annot-file ${out_file_name}.$i.$j.annot.gz
+
+    mv ${out_file_name}.$i.$j.annot.gz -t ${output_file_address}
+
+    done
+
+
+    >>>
+
+
+    output {
+        String out = read_string(stdout())
+
+    }
+
+}
+
+
+workflow test_make_thin_annot_22 {
+    String? workflow_output_file_address
+    String? workflow_working_directory
+    String? name_of_output
+
+    call make_thin_annot_22 {
+        input: work_directory = workflow_working_directory,
+        output_file_address = workflow_output_file_address,
+        out_file_name = name_of_output
+
+    }
+
 
 }
 
