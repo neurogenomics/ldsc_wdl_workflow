@@ -224,20 +224,20 @@ workflow test_make_thin_annot_22 {
 
 }
 
-workflow test_make_normal_annot_22 {
-    String? workflow_output_file_address
-    String? workflow_working_directory
-    String? name_of_output
-
-    call make_normal_annot_22 {
-        input: work_directory = workflow_working_directory,
-        output_file_address = workflow_output_file_address,
-        out_file_name = name_of_output
-
-    }
-
-
-}
+#workflow test_make_normal_annot_22 {
+#    String? workflow_output_file_address
+#    String? workflow_working_directory
+#    String? name_of_output
+#
+#    call make_normal_annot_22 {
+#        input: work_directory = workflow_working_directory,
+#        output_file_address = workflow_output_file_address,
+#        out_file_name = name_of_output
+#
+#    }
+#
+#
+#}
 
 #workflow test_make_thin_annot {
 #    String? workflow_output_file_address
