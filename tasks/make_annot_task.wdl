@@ -162,8 +162,9 @@ task make_thin_annot_22 {
     String? out_file_name 
 
     Int cell_types_number
-    File bedfile
-    String bedfile_argument = if (bedfile != "") then "--bed-file ${bedfile}" else ""
+    String bed_file_preflix
+    String bedfile_address
+    String bed_file_sufflix
 
     String? bimfile_address
     String? bimfile_preflix
@@ -182,16 +183,18 @@ task make_thin_annot_22 {
 
     source activate ldsc
     cd ${work_directory}/ldsc
-
-    for((j=1; j<=22; j=j+1))
+    
+    for((i=1; i<=${cell_types_number}; i=i+1))
     do
-    ./make_annot.py \
-    ${bedfile_argument} \
-    --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
-    --annot-file ${out_file_name}.$i.$j.annot.gz
+        for((j=1; j<=22; j=j+1))
+        do
+        ./make_annot.py \
+        --bed-file ${bed_file_address}/${bed_file_preflix}"$i"${bed_file_sufflix} \
+        --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
+        --annot-file ${out_file_name}.$i.$j.annot.gz
 
-    mv ${out_file_name}.$i.$j.annot.gz -t ${output_file_address}
-
+        mv ${out_file_name}.$i.$j.annot.gz -t ${output_file_address}
+        done
     done
 
 
