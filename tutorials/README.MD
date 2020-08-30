@@ -3,7 +3,7 @@ HGC = Heritability and Genetic Correlation
 LDSE = LD Score Estimation  
 PH = Partitioned Heritability  
 
-Before using this tutorial files, plz pull latest cromwell files from here: https://github.com/broadinstitute/cromwell/releases 
+Before using this tutorial files, please pull latest cromwell files from here: https://github.com/broadinstitute/cromwell/releases 
 
 You can download and run "tutorial_preparation" part to prepare all files necessary for running this tutorial.    
 #1 Remember to modify input and output files address in input_sample.json files in order to make wdl find correct address  
