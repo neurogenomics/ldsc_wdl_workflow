@@ -163,7 +163,7 @@ task make_thin_annot_22 {
 
     Int cell_types_number
     String bed_file_preflix
-    String bedfile_address
+    String bed_file_address
     String bed_file_sufflix
 
     String? bimfile_address
