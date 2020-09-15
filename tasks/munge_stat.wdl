@@ -75,9 +75,7 @@ task preprocessing {
     command<<<
         source activate ldsc
         unset LD_PRELOAD
-        cd ${work_directory}
-        git clone https://github.com/bulik/ldsc.git
-        cd ldsc
+        cd ${work_directory}/ldsc
         
 
         ./munge_sumstats.py \
