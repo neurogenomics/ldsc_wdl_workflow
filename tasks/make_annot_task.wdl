@@ -189,7 +189,7 @@ task make_thin_annot_22 {
         for((j=1; j<=22; j=j+1))
         do
         ./make_annot.py \
-        --bed-file ${bedfile_address}/${bedfile_preflix}"$i"$bedfile_sufflix} \
+        --bed-file ${bedfile_address}/${bedfile_preflix}"$i"${bedfile_sufflix} \
         --bimfile ${bimfile_address}/${bimfile_preflix}.$j.bim \
         --annot-file ${out_file_name}.$i.$j.annot.gz
 
