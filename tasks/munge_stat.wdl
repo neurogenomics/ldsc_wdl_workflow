@@ -74,7 +74,6 @@ task preprocessing {
 
     command<<<
         source activate ldsc
-        unset LD_PRELOAD
         cd ${work_directory}/ldsc
         
 
