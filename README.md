@@ -1,3 +1,2 @@
 # ldsc WDL(Workflow Description Language) workflow
-## Introduction:
-Will be updated soon :)
+This repository is not going to be updated anymore
