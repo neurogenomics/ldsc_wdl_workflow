@@ -57,7 +57,7 @@ task preprocessing {
     String? minimum_of_studies
     String NSTUDY_MIN_argument = if (minimum_of_studies != "") then "--nstudy-min" else ""
     String? ignore_comma_seperated_list 
-    String IGNORE_argument = if (ignore_comma_seperated_list != "") then "--ignore" else ""
+    String IGNORE_argument = if (ignore_comma_seperated_list != "") then "--ignore ${ignore_comma_seperated_list}" else ""
     String? A1_increasing_allele
     String a1_inc_argument = if (A1_increasing_allele != "") then "--a1-inc" else ""
     String? keep_maf
@@ -74,10 +74,7 @@ task preprocessing {
 
     command<<<
         source activate ldsc
-        unset LD_PRELOAD
-        cd ${work_directory}
-        git clone https://github.com/bulik/ldsc.git
-        cd ldsc
+        cd ${work_directory}/ldsc
         
 
         ./munge_sumstats.py \
